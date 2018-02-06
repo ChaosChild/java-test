@@ -1,12 +1,21 @@
-# Java Test
-In order to perform this test, clone the repo, perform the activities required, then create a pull request with your code. Provide any and all comments in the pull request rather than in the code itself.
+Classes in the Project
 
-### The coding exercise consists of the following four tasks:
-1. Merge the lists together, summing up the amounts for departments with the same name.
-1. Sort the result list by Department.name in _DESCENDING_ order.
-1. Output the results into a text file in CSV, comma delimitted format.
-1. Read in the text file from #3 and output the results to console in _ASCENDING_ order by amount.
+a) CSVOperations
+	Contains three methods:
+	1 determineFilePath() which returns the user home file path based on the Environment.
+	2. createFile() Which takes a List of Departments and writes them into a CSV comma 	   delimitted file and returns nothing.
+	3. readFile() which takes no parameter, reads a csv file and returns a list of departments.
 
-While performing this exercise you're not limited to using only core Java, you can use any external library, but make sure I can resolve the dependency on my side and build the project. _Hint:_ I will not hunt for dependencies or match versions.
+b) DepartmentOperations
+	Contains one method:
+	1 mergeDepartments() which takes a vararg Departments array and merge them summing Amount on duplicate Departments.
+	
+c) JavaTest
+	Contains the main method which invokes all the classes above and prints to the Console.
+	It also contains Department sorting functionality
+	
+d) SomeData
+	Contains 3 Methods that all return an array of departments
 
-**Good luck!**
+e) Departments
+	Is the Object that contains getters and setters for the Department.
